@@ -38,7 +38,10 @@ public class LoginController {
      */
     @RequestMapping(value = "/register.do",method = RequestMethod.POST)
     public String register(User user, String repassword,Model model){
+    	
         String result = loginService.register(user,repassword);
+        System.out.println("进入注册方法");
+    	System.out.println(user);
         if(result.equals("ok")){
             model.addAttribute("info","系统已经向你的邮箱发送了一封邮件哦，验证后就可以登录啦~");
             return "prompt/promptInfo";

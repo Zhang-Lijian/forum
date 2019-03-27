@@ -53,7 +53,7 @@ public class LoginService {
         //检查邮箱是否被注册
         int emailCount = userMapper.selectEmailCount(user.getEmail());
         if(emailCount>0){
-            return "该邮箱已被注册~";
+            return "该邮箱已被注册你个猪~";
         }
 
         //构造user，设置未激活
